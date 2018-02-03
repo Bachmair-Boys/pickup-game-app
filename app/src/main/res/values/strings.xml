@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PickupGame</string>
+    <string name="title_activity_signup">signup</string>
+    <string name="title_activity_mygame">mygame</string>
 </resources>
