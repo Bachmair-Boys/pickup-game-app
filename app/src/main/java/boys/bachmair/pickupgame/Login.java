@@ -1,8 +1,10 @@
 package boys.bachmair.pickupgame;
 
 //import android.content.Intent;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 //import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
@@ -18,5 +20,10 @@ public class Login extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.logintitle);
         textView.setText(message);*/
+    }
+
+    public void mainMenu(View view) {
+        Intent intent = new Intent(this, MainMenu.class);
+        startActivity(intent);
     }
 }
