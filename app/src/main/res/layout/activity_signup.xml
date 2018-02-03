@@ -1,33 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="boys.bachmair.pickupgame.signup">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="boys.bachmair.pickupgame.SignUp"
+    tools:showIn="@layout/activity_signup">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_signup" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <EditText
+        android:id="@+id/signuptitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sign Up!"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="1dp" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <EditText
+        android:id="@+id/passreg"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <EditText
+        android:id="@+id/passwordreg"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <EditText
+        android:id="@+id/reguser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <EditText
+        android:id="@+id/usernamereg"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Username:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <EditText
+        android:id="@+id/emailreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="156dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="119dp" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email:"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="119dp" />
+</android.support.constraint.ConstraintLayout>

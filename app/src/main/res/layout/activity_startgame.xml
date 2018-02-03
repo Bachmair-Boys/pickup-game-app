@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="boys.bachmair.pickupgame.startgame">
+    tools:context="boys.bachmair.pickupgame.StartGame">
 
     <EditText
         android:id="@+id/startgametitle"
-        android:layout_width="120"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
@@ -48,7 +48,7 @@
         tools:layout_editor_absoluteY="77dp" />
 
     <RadioButton
-        android:id="@+id/public"
+        android:id="@+id/publicGame"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Public"
@@ -56,7 +56,7 @@
         tools:layout_editor_absoluteY="205dp" />
 
     <RadioButton
-        android:id="@+id/private"
+        android:id="@+id/privateGame"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Private"

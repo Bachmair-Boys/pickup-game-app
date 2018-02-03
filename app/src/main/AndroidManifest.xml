@@ -12,19 +12,17 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        <activity android:name=".DisplayMessageActivity"></activity>
-      
-        <activity
-            android:name=".signup"
-            android:label="@string/title_activity_signup"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".mainmenu" />
-        <activity android:name=".startgame" />
+
+        <activity android:name=".Login"></activity>
+
+        <activity android:name=".SignUp"></activity>
+
+        <activity android:name=".MainMenu" />
+
+        <activity android:name=".StartGame" />
 
     </application>
 

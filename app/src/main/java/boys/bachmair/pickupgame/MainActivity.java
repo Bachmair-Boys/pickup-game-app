@@ -14,13 +14,13 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user taps the Login button */
     public void loginScreen(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
 
     /** Called when the user taps the Sign Up button */
     public void signupScreen(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
 }

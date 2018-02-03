@@ -3,7 +3,7 @@ package boys.bachmair.pickupgame;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class mainmenu extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
