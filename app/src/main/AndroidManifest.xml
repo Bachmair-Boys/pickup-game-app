@@ -21,6 +21,8 @@
         <activity android:name=".StartGame" />
         <activity android:name=".JoinGame">
         </activity>
+        <activity android:name=".MyGame">
+        </activity>
     </application>
 
 </manifest>
