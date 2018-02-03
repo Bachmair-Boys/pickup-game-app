@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="boys.bachmair.pickupgame.mainmenu">
+
+    <Button
+        android:id="@+id/startgame"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="Start Game"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <Button
+        android:id="@+id/findgame"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="Find Games"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <Button
+        android:id="@+id/friends"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="Friends"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="Settings"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="504dp" />
+</android.support.constraint.ConstraintLayout>
