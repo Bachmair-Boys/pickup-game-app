@@ -7,9 +7,9 @@
     tools:context="boys.bachmair.pickupgame.JoinGame">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/game_name"
+        android:layout_width="99dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/game_host"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -36,11 +36,11 @@
         app:layout_constraintVertical_bias="0.264" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/game_end_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="243dp" />
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="134dp" />
 
 </android.support.constraint.ConstraintLayout>

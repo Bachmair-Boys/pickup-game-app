@@ -17,13 +17,12 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
-
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -139,7 +138,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                     e.printStackTrace();
                 }
                 for(Game g : nearbyGames){
-                    placeMarkerOnMap(g.location,g.host,g.name);
+                    placeMarkerOnMap(g);
                 }
 //                //add pin at user's location
 //                placeMarkerOnMap(currentLocation);
@@ -149,11 +148,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         }
     }
 
-    protected void placeMarkerOnMap(LatLng location, String host, String title) {
+    protected void placeMarkerOnMap(Game g) {
 
-        MarkerOptions markerOptions = new MarkerOptions().position(location);
-        markerOptions.title(title + ", hosted by " + host);
-        mMap.addMarker(markerOptions);
+        MarkerOptions markerOptions = new MarkerOptions().position(g.location);
+        markerOptions.title(g.name + ", hosted by " + g.host);
+        Marker marker = mMap.addMarker(markerOptions);
+        marker.setTag(g);
     }
 
     protected void getLocations(double latitude, double longitude, double radius) throws Exception {
@@ -184,7 +184,25 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         game.type = Game.GameType.BASKETBALL;
         game.visibility = Game.Visibility.PUBLIC;
         game.until = new Date(new Date().getTime() + (2*60*60));
+
+        Game game2 = new Game();
+        game2.host = "Giorgian";
+        game2.location = new LatLng(latitude + 0.01,longitude -0.01);
+        game2.name = "Giorgian's Tennis Game";
+        game2.type = Game.GameType.BASKETBALL;
+        game2.visibility = Game.Visibility.PUBLIC;
+        game2.until = new Date(new Date().getTime() + (2*60*60));
+
+        Game game3 = new Game();
+        game3.host = "Farhan";
+        game3.location = new LatLng(latitude - 0.02,longitude + 0.005);
+        game3.name = "Farhan's Baseball Game";
+        game3.type = Game.GameType.BASKETBALL;
+        game3.visibility = Game.Visibility.PUBLIC;
+        game3.until = new Date(new Date().getTime() + (2*60*60));
         nearbyGames.add(game);
+        nearbyGames.add(game2);
+        nearbyGames.add(game3);
     }
 
     public void setWindowClickListener() {
@@ -192,9 +210,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
             @Override
             public void onInfoWindowClick(Marker marker) {
-                Intent intent = new Intent(this, JoinGame.class);
-                intent.putExtra("")
+
+                viewGame(marker);
             }
         });
+    }
+
+    public void viewGame(Marker marker) {
+        Intent intent = new Intent(this, JoinGame.class);
+        intent.putExtra("boys.bachmair.pickupgame.Game", (Game)marker.getTag());
+        startActivity(intent);
     }
 }
