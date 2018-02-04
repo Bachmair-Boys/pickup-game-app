@@ -11,4 +11,5 @@
     <string name="person1">Person 1</string>
     <string name="person2">Person 2</string>
     <string name="person3">Person 3</string>
+    <string name="title_activity_map">Map</string>
 </resources>

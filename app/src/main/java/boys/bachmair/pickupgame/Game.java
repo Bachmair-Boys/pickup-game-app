@@ -1,5 +1,8 @@
-import java.util.Date;
+package boys.bachmair.pickupgame;
+
 import com.google.android.gms.maps.model.LatLng;
+
+import java.util.Date;
 
 public class Game {
 
@@ -12,5 +15,9 @@ public class Game {
     public LatLng location;
     public Date until;
 
+    @Override
+    public String toString() {
+        return name + ";" + host + ";" + type + ";" + ""
+    }
 }
 
