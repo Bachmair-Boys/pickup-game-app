@@ -17,7 +17,7 @@ public class Game {
 
     @Override
     public String toString() {
-        return name + ";" + host + ";" + type + ";" + ""
+        return name + ";" + host + ";" + type + ";" + "";
     }
 }
 

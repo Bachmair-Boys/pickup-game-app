@@ -1,6 +1,5 @@
 package boys.bachmair.pickupgame;
 
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -22,8 +21,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
-
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -72,7 +69,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         mMap = googleMap;
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.setOnMarkerClickListener(this);
-        setWindowClickListener();
+        //setWindowClickListener();
     }
 
     @Override
@@ -184,17 +181,26 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         game.type = Game.GameType.BASKETBALL;
         game.visibility = Game.Visibility.PUBLIC;
         game.until = new Date(new Date().getTime() + (2*60*60));
+
+        Game game2 = new Game();
+        game2.host = "LeoB";
+        game2.location = new LatLng(latitude + .01,longitude - .01);
+        game2.name = "Baseball Game";
+        game2.type = Game.GameType.BASKETBALL;
+        game2.visibility = Game.Visibility.PUBLIC;
+        game2.until = new Date(new Date().getTime() + (2*60*60));
+
         nearbyGames.add(game);
+        nearbyGames.add(game2);
     }
 
-    public void setWindowClickListener() {
-        mMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
-
-            @Override
-            public void onInfoWindowClick(Marker marker) {
-                Intent intent = new Intent(this, JoinGame.class);
-                intent.putExtra("")
-            }
-        });
-    }
+//    public void setWindowClickListener() {
+//        mMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
+//
+//            @Override
+//            public void onInfoWindowClick(Marker marker) {
+//                //Intent intent = new Intent(this, JoinGame.class);
+//            }
+//        });
+//    }
 }
