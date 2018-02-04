@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PickupGame</string>
+    <string name="title">Pickup Game</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="next">Next</string>
+    <string name="gameName">Name of Game</string>
+    <string name="person1">Person 1</string>
+    <string name="person2">Person 2</string>
+    <string name="person3">Person 3</string>
+    <string name="title_activity_map">Map</string>
 </resources>
